@@ -17,7 +17,7 @@ const SIDEBAR_ITEMS = [
     name: "Overview",
     icon: BarChart2,
     color: "#6366f1",
-    path: "/",
+    href: "/",
   },
   {
     name: "Products",
@@ -86,6 +86,29 @@ const Sidebar = () => {
                   size={20}
                   style={{ color: item.color, minWidth: "20px;" }}
                 />
+
+                <AnimatePresence>
+                  {isSidebarOpen && (
+                    <motion.span
+                      className="ml-4 whitespace-nowrap"
+                      initial={{
+                        opacity: 0,
+                        width: 0,
+                      }}
+                      animate={{
+                        opacity: 1,
+                        width: "auto",
+                      }}
+                      exit={{ opacity: 0, width: 0 }}
+                      transition={{
+                        duration: 0.2,
+                        delay: 0.3,
+                      }}
+                    >
+                      {item.name}
+                    </motion.span>
+                  )}
+                </AnimatePresence>
               </motion.div>
             </Link>
           ))}
