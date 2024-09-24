@@ -1,9 +1,12 @@
 import React from "react";
 import Header from "../components/common/Header";
+import { BarChart2, ShoppingBag, User, Zap } from "lucide-react";
+
 import { motion } from "framer-motion";
 import StatCard from "../components/common/StatCard";
-import { BarChart2, ShoppingBag, User, Zap } from "lucide-react";
 import SalesOverviewChart from "../components/overview/SalesOverviewChart";
+import CategoryDistributionChart from "../components/overview/CategoryDistributionChart";
+import SalesChannelChart from "../components/overview/SalesChannelChart";
 
 const OverviewPage = () => {
   return (
@@ -43,8 +46,10 @@ const OverviewPage = () => {
           />
         </motion.div>
         {/* {CHART } */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <SalesOverviewChart />
+          <CategoryDistributionChart />
+          <SalesChannelChart />
         </div>
       </main>
     </div>
