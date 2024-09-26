@@ -26,23 +26,18 @@ const OverviewPage = () => {
             value="$123,345"
             color="#6366f1"
           />
-          <StatCard
-            name="New Users"
-            icon={User}
-            value="$123,345"
-            color="#6366f1"
-          />
+          <StatCard name="New Users" icon={User} value="1345" color="#10B981" />
           <StatCard
             name="Total Products"
             icon={ShoppingBag}
             value="345"
-            color="#6366f1"
+            color="#F59E0B"
           />
           <StatCard
             name="Conversion Rate"
             icon={BarChart2}
             value="12.5%"
-            color="#6366f1"
+            color="#EF4444"
           />
         </motion.div>
         {/* {CHART } */}

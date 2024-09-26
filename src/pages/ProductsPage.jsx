@@ -3,6 +3,9 @@ import Header from "../components/common/Header";
 import { motion } from "framer-motion";
 import { AlertTriangle, DollarSign, Package, TrendingUp } from "lucide-react";
 import StatCard from "../components/common/StatCard";
+import ProductsTable from "../components/products/ProductsTable";
+import CategoryDistributionChart from "../components/overview/CategoryDistributionChart";
+import SalesTrendChart from "../components/products/SalesTrendChart";
 
 const ProductsPage = () => {
   return (
@@ -26,21 +29,27 @@ const ProductsPage = () => {
             name="Top Selling"
             icon={TrendingUp}
             value="45"
-            color="#6366f1"
+            color="#10B981"
           />
           <StatCard
             name="Low Stock"
             icon={AlertTriangle}
             value="65"
-            color="#6366f1"
+            color="#F59E0B"
           />
           <StatCard
             name="Total Revenue"
             icon={DollarSign}
             value="12500000VND"
-            color="#6366f1"
+            color="#EF4444"
           />
         </motion.div>
+        <ProductsTable />
+        {/* {CHART } */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <SalesTrendChart />
+          <CategoryDistributionChart />
+        </div>
       </main>
 
       {/* {PRODUCTTABLE} */}
