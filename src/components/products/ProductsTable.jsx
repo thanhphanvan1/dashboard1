@@ -122,7 +122,32 @@ const ProductTable = () => {
                 transition={{ duration: 0.3 }}
               >
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-100 flex  gap-2 items-center">
+                  <img
+                    src="https://i.imgur.com/6hLWDPOh.png"
+                    alt="Product Img"
+                    className="size-10 rounded-full"
+                  />
                   {product.name}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                  {product.category}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                  {product.price}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                  {product.stock}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                  {product.sales}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                  <button className="text-indigo-400 hover:text-indigo-300 mr-2">
+                    <Edit size={18} />
+                  </button>
+                  <button className="text-red-600 hover:text-red-400">
+                    <Edit size={18} />
+                  </button>
                 </td>
               </motion.tr>
             ))}
